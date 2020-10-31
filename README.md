@@ -35,7 +35,7 @@
 ### Links
 - https://amcmilne.github.io/Password-Generator/
 - https://github.com/amcmilne/Password-Generator
-- <img src= ./images.scriptcodesreenshot.png>
-
+<img src= /images/03-javascript-homework-demo.png>
+<img src= /images\scriptcodescreenshot.png>
 ### License
 MIT
