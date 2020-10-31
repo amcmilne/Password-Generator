@@ -14,10 +14,10 @@
 
 // Add event listener to generate button
 
-var randomUpperCase= false;
-var randomLowerCase= false;
-var randomNumber= false;
-var randomSymbol= false;
+var randomUpperCase = false;
+var randomLowerCase = false;
+var randomNumber = false;
+var randomSymbol = false;
 var pwLength = 0;
 var symbols = "~`! @#$%^&*()_-+={[}]|\:;'<,>.?/";
 
@@ -44,7 +44,7 @@ function getRandomSymbol() {
 // THEN my input should be validated and at least one character type should be selected
 // WHEN all prompts are answered
 
-function generatePassword(){
+function generatePassword() {
   var password = "";
 
   var passwordOptions = [
@@ -62,12 +62,12 @@ function generatePassword(){
 
   // Handle remainders
   var numOfCharForEachOption = pwLength / complexityCounter;
-  var numOfCharForEachOptionRemainder =  numOfCharForEachOption % 1 > 0 ? 1 : 0;
+  var numOfCharForEachOptionRemainder = numOfCharForEachOption % 1 > 0 ? 1 : 0;
 
   numOfCharForEachOption = Math.floor(numOfCharForEachOption);
 
   if (randomLowerCase == true) {
-    if(password.length == 0 && numOfCharForEachOptionRemainder > 0 ){
+    if (password.length == 0 && numOfCharForEachOptionRemainder > 0) {
       password = password + getRandomLowerCase();
     }
 
@@ -77,7 +77,7 @@ function generatePassword(){
   }
 
   if (randomUpperCase == true) {
-    if(password.length == 0 && numOfCharForEachOptionRemainder > 0 ){
+    if (password.length == 0 && numOfCharForEachOptionRemainder > 0) {
       password = password + getRandomUpperCase();
     }
     for (i = 0; i < numOfCharForEachOption; i++) {
@@ -86,7 +86,7 @@ function generatePassword(){
   }
 
   if (randomNumber == true) {
-    if(password.length == 0 && numOfCharForEachOptionRemainder > 0 ){
+    if (password.length == 0 && numOfCharForEachOptionRemainder > 0) {
       password = password + getRandomNumber();
     }
     for (i = 0; i < numOfCharForEachOption; i++) {
@@ -95,7 +95,7 @@ function generatePassword(){
   }
 
   if (randomSymbol == true) {
-    if(password.length == 0 && numOfCharForEachOptionRemainder > 0 ){
+    if (password.length == 0 && numOfCharForEachOptionRemainder > 0) {
       password = password + getRandomSymbol();
     }
     for (i = 0; i < numOfCharForEachOption; i++) {
@@ -122,7 +122,7 @@ if (generateBtn) {
     randomLowerCase = confirm("Include an Lower Case?");
     randomNumber = confirm("Include a Number?");
     randomSymbol = confirm("Include a Symbol?");
-    
+
     generatePassword();
   });
 }
